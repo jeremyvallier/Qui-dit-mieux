@@ -1,0 +1,506 @@
+/* =========================================================
+   Qui Dit Mieux - styles.css
+   CSS simple et léger
+   ========================================================= */
+
+/* ---------- Base ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.5;
+}
+
+main {
+    width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* ---------- Header / menu ---------- */
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-bottom: 4px solid #444;
+}
+
+.titre-header {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.titre-header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.menu {
+    width: 900px;
+    margin: 15px auto 0;
+}
+
+.menu h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.menu a {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #777;
+}
+
+.menu a:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+/* ---------- Liens ---------- */
+
+a {
+    color: #1d5f91;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Boutons ---------- */
+
+input[type="submit"] {
+    padding: 9px 16px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* ---------- Champs de formulaire ---------- */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    padding: 8px;
+    border: 1px solid #bbb;
+    font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* ---------- Formulaire accueil ---------- */
+
+.form-accueil {
+    margin: 20px 0 30px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+.form-accueil label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* ---------- Recherche ---------- */
+
+.form-recherche {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+.form-recherche fieldset,
+.form-edition fieldset {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #bbb;
+}
+
+.form-recherche fieldset label,
+.form-edition fieldset label {
+    display: block;
+    margin: 8px 0;
+}
+
+.form-recherche input[type="radio"],
+.form-edition input[type="radio"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+.form-recherche fieldset input[type="radio"],
+.form-edition fieldset input[type="radio"] {
+    margin-top: 0;
+}
+
+/* ---------- Annonces récentes ---------- */
+
+.liste-annonces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-recent {
+    width: 270px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.photo-recent {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background-color: #e9e9e9;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.photo-recent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-recent span {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.info-recent {
+    text-align: left;
+}
+
+.titre-recent {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.prix-recent {
+    font-weight: bold;
+}
+
+/* ---------- Résultats de recherche ---------- */
+
+.resultats-recherche {
+    margin-top: 30px;
+}
+
+.card-trouvee {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.photo-trouvee {
+    width: 220px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: #e9e9e9;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.photo-trouvee img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-trouvee p {
+    padding: 10px;
+    text-align: center;
+}
+
+.info-trouvee {
+    padding-left: 20px;
+}
+
+.titre-trouvee {
+    margin-bottom: 10px;
+}
+
+.prix-trouvee {
+    font-weight: bold;
+}
+
+.fin-trouvee {
+    margin-bottom: 15px;
+}
+
+/* ---------- Détail d'une annonce ---------- */
+
+.entete-detail {
+    margin-top: 20px;
+}
+
+.photo-principale {
+    width: 500px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.photo-principale img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.photos-detail {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.photo-secondaire {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.info-detail {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+}
+
+.info-detail p {
+    margin: 8px 0;
+}
+
+.info-detail a {
+    display: inline-block;
+    margin: 15px 10px 0 0;
+    padding: 9px 14px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+}
+
+.info-detail a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+/* ---------- Connexion / inscription ---------- */
+
+.connex_inscrip {
+    width: 450px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+.connex_inscrip label {
+    font-weight: bold;
+}
+
+/* ---------- Compte ---------- */
+
+form[action="enregistrer_compte.php"] {
+    width: 500px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+form[action="enregistrer_compte.php"] p {
+    margin: 0 0 15px;
+}
+
+form[action="enregistrer_compte.php"] small {
+    display: block;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* ---------- Edition / nouvelle annonce ---------- */
+
+.form-edition {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+.form-edition h2 {
+    margin-top: 25px;
+}
+
+.form-edition input[type="file"] {
+    display: block;
+    margin-top: 6px;
+}
+
+.form-edition img {
+    width: 150px;
+    height: 110px;
+    margin: 5px 10px 10px 0;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.form-edition input[type="submit"] {
+    margin: 10px 8px 0 0;
+}
+
+/* ---------- Nouvelle enchère ---------- */
+
+.nouv-enchere {
+    width: 450px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+.nouv-enchere input[type="number"] {
+    margin-bottom: 15px;
+}
+
+/* ---------- Historique des enchères ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #e9e9e9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+/* ---------- Tableau de bord ---------- */
+
+.annonce-dashboard,
+.suivi-dashboard {
+    margin-bottom: 20px;
+    padding: 18px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.annonce-dashboard p,
+.suivi-dashboard p {
+    margin: 7px 0;
+}
+
+.annonce-dashboard a,
+.suivi-dashboard a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 7px 12px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+}
+
+.annonce-dashboard a:hover,
+.suivi-dashboard a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+#etat-annonce-1,
+[id^="etat-annonce-"] {
+    font-weight: bold;
+}
+
+[id^="meilleur-suivi-"] {
+    font-weight: bold;
+}
+
+/* ---------- Messages ---------- */
+
+main > p {
+    margin: 15px 0;
+}
+
+p:has(+ form) {
+    margin-bottom: 10px;
+}
+
+/* ---------- Fin ---------- */
